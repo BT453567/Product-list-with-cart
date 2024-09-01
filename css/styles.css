@@ -188,13 +188,19 @@ div.red-border {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
     z-index: 1010;
     min-width: 30rem;
-    overscroll-behavior: contain;
-    overflow: auto;
-    max-height: 90vh;
   }
 
-  .modal__items {
+  .modal__items-container {
     background-color: var(--rose-50);
+  }
+
+  .modal__items-list {
+    padding-inline: 20px;
+    overflow-y: auto;
+    max-height: 40vh;
+  }
+
+  .modal__items-price {
     padding-inline: 20px;
   }
 
