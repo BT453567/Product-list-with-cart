@@ -6,7 +6,10 @@ let overlay = document.getElementById("overlay");
 let modal = document.getElementById("modal");
 let confirmOrderButton = document.getElementById("confirm-order");
 let newOrderButton = document.getElementById("new-order-button");
-let orderConfirmationItems = document.getElementById("modal-items");
+// let orderConfirmationItems = document.getElementById("modal-items");
+
+let orderConfirmationItems = document.getElementById("modal-list");
+let orderConfirmationPrice = document.getElementById("modal-price");
 
 let basket = [];
 
@@ -134,7 +137,8 @@ function generateConfirmOrder() {
                     <span class="fc-900">Order Total</span><span class="fs-500 fw-700">$${calculateBasketTotal().toFixed(2)}</span>
                   </div>`;
 
-  orderConfirmationItems.innerHTML = itemsHTML + totalHTML;
+  orderConfirmationItems.innerHTML = itemsHTML;
+  orderConfirmationPrice.innerHTML = totalHTML;
 }
 
 function addToBasket(addToBasketButton, itemName) {
